@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    /* Ensures everything stacks nicely */
+}
+
+p {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+table {
+    background: white;
+    padding: 20px;
+    border-collapse: collapse;
+    box-shadow: 0px 20px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: auto;
+    /* Centers the table */
+}
+
+td {
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    /* Centers text inside cells */
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    /* Centers text inside input boxes */
+}
+
+input[type="submit"] {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background: #0056b3;
+}
