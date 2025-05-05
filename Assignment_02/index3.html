@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BHMS Booking & Marketing</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 0;
+        }
+        .navbar {
+            background-color: #007bff !important;
+        }
+        .navbar-brand img {
+            display: none;
+        }
+        .navbar-brand {
+            padding-left: 0;
+        }
+        .navbar-collapse {
+            padding-left: 0;
+        }
+        .fixed-bottom-buttons {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+        }
+        .fixed-bottom-buttons .btn {
+            flex: 1;
+            border-radius: 0;
+        }
+        .big-info-box {
+            margin: 20px 0;
+        }
+        .small-info-box {
+            background: #007bff;
+            color: white;
+            padding: 10px;
+            height:80px;
+            text-align: center;
+            border-radius: 8px;
+            margin: 5px;
+            flex: 1;
+        }
+        .container {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .card {
+            background-color: #007bff;
+            color: #fff;
+            height: 500px; /* Set the height of the card */
+        }
+        .card-img-top {
+            width: 150px; /* Set the width of the image */
+            height: 150px; /* Set the height of the image */
+            object-fit: cover;
+        }
+        .card-title {
+            font-size: 1.25rem; /* Increase the font size of the title */
+        }
+        .card-text {
+            font-size: 1rem; /* Increase the font size of the text */
+        }
+        .services img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        .services .card {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .services h2{
+            margin-top:50px;
+            margin-bottom:20px;
+        }
+        .footer {
+            background-color: #000;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            width: 100%; /* Ensure footer spans the full width */
+        }
+        .carousel-item img {
+            height: 600px; /* Adjust the height of the slider */
+        }
+        .info-box-row {
+            text-align: center; /* Center align the title */
+        }
+        .carousel-control-prev:focus, .carousel-control-prev:hover,
+        .carousel-control-next:focus, .carousel-control-next:hover {
+            color: yellow !important;
+        }
+        .carousel-control-prev:not(:disabled):not(.disabled),
+        .carousel-control-next:not(:disabled):not(.disabled) {
+            opacity: 1 !important;
+        }
+        @media (min-width: 768px) {
+            .booking-form .col-md-6 {
+                /* Remove height property */
+                display: flex;
+                flex-direction: row; /* Change direction to row */
+                justify-content: space-between;
+                margin-top:30px; }
+            .booking-form .col-md-6 img {
+                height: auto; /* Make the height of the image dynamic */
+                max-height: 100%; /* Ensure the image does not exceed the height of the container */
+            }
+            .booking-form .col-md-6 form {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+        }
+        
+        .booking-form h2{
+            margin-top:50px;
+        }
+    
+        @media (max-width: 767px) {
+            .booking-form .col-md-6 {
+                margin-top: 100px; /* Add a margin between image and input on mobile */
+            }
+        }
+        .footer .social-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px; /* Add margin if needed */
+        }
+        
+        .footer .social-icons a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 5px;
+            width: 40px; /* Adjust the size for better spacing */
+            height: 40px; /* Adjust the size for better spacing */
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        
+        .footer .social-icons img {
+            width: 40px; /* Set the desired size */
+            height: 40px; /* Set the desired size */
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        
+        .footer {
+            background-color: #000;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            width: 100%;
+        }
+        
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <a class="navbar-brand" href="#">BHMS Hospital</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#location">Location</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#booking-form">Book Now</a>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+
+<div id="carouselExampleIndicators" class="carousel slide image-slider" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="abc.jpg" class="d-block w-100" alt="Hospital Image 1">
+        </div>
+        <div class="carousel-item">
+            <img src="abc2.jpg" class="d-block w-100" alt="Hospital Image 2">
+        </div>
+        <div class="carousel-item">
+            <img src="abc3.jpg" class="d-block w-100" alt="Hospital Image 3">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<div class="container doctor-info">
+    <h2 class="text-center">Doctor Information</h2>
+    <div class="row">
+        <div class="col-md-6 order-md-2 text-center">
+            <img src="abb.jpg" alt="Doctor Photo" class="doctor-photo rounded-circle img-fluid" style="height: 150px;">
+        </div>
+        <div class="col-md-6 order-md-1">
+            <div class="doctor-details">
+                <h3>Dr. John Doe, BHMS</h3>
+                <p>Specialist in Homeopathy, Allergies, and Asthma. Graduated from ABC University.</p>
+                <button class="btn btn-primary" data-toggle="collapse" data-target="#moreInfo" aria-expanded="false" aria-controls="moreInfo">Read More</button>
+                <div class="collapse" id="moreInfo">
+                    <p>Dr. John Doe has over 17 years of experience in the field of homeopathy. He has successfully treated numerous cases of allergies and asthma, helping patients improve their quality of life with natural remedies.</p>
+                    <button class="btn btn-secondary" data-toggle="collapse" data-target="#moreInfo" aria-expanded="false" aria-controls="moreInfo">Read Less</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container services" id="services">
+    <h2 class="text-center">Our Services</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <a href="https://www.allergy.org.au/patients/about-allergy/what-is-allergy#:~:text=Allergy%20occurs%20when%20a%20person's,tendency%20to%20develop%20allergic%20diseases.">
+                    <img src="a.jpg" class="card-img-top rounded-circle mx-auto d-block" alt="Allergy">
+                </a>
+                <div class="card-body text-center">
+                    <h5 class="card-title">Allergy</h5>
+                    <p class="card-text">Treatment to alleviate allergy symptoms and improve immune response.</p>
+                    <p><i>Image Source: Wikipedia</i></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <a href="https://www.who.int/news/item/07-05-2024-world-asthma-day--who-calls-for-better-education-to-empower-people-living-with-asthma">
+                    <img src="b.jpg" class="card-img-top rounded-circle mx-auto d-block" alt="Asthma">
+                </a>
+                <div class="card-body text-center">
+                    <h5 class="card-title">Asthma</h5>
+                    <p class="card-text">Used to manage symptoms and potentially reduce dependency on conventional medications.</p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <a href="https://www.medicalnewstoday.com/articles/systemic-juvenile-idiopathic-arthritis">
+                    <img src="c.jpg" class="card-img-top rounded-circle mx-auto d-block" alt="Arthritis">
+                </a>
+                <div class="card-body text-center">
+                    <h5 class="card-title">Arthritis</h5>
+                    <p class="card-text">May help manage pain and reduce inflammation in the joints.</p>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- Add more cards as needed -->
+    </div>
+</div>
+<div class="container">
+    <div class="big-info-box text-center border border-primary p-3 mt-4">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-md-4">
+                <div class="small-info-box">10000+ Happy Patients</div>
+            </div>
+            <div class="col-md-4">
+                <div class="small-info-box">17+ Years of Experience</div>
+            </div>
+            <div class="col-md-4">
+                <div class="small-info-box">98% Success Ratio</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container before-after">
+    <h2 class="text-center">Before and After</h2>
+    <div id="beforeAfterCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="ab33.jpg" alt="Before and After Treatment" class="d-block mx-auto" style="height: 150px; width: 300px; border: 1px solid #000;">
+            </div>
+            <div class="carousel-item">
+                <img src="ab44.jpg" alt="Before and After Treatment" class="d-block mx-auto" style="height: 150px; width: 300px; border: 1px solid #000;">
+            </div>
+            <div class="carousel-item">
+                <img src="ab22.jpg" alt="Before and After Treatment" class="d-block mx-auto" style="height: 150px; width: 300px; border: 1px solid #000;">
+            </div>
+            <!-- Add more carousel items as needed -->
+        </div>
+        <a class="carousel-control-prev" href="#beforeAfterCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#beforeAfterCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+
+<div class="container booking-form" id="booking-form">
+    <h2 class="text-center">Book an Appointment</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-12">
+                        <label for="name">Full Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group col-12">
+                        <label for="age">Age</label>
+                        <input type="number" class="form-control" id="age" placeholder="Enter your age">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-12">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group col-12">
+                        <label for="phone">Phone Number</label>
+                        <input type="text" class="form-control" id="phone" placeholder="Enter your phone number">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <img src="abccc.jpg" class="img-fluid" alt="Booking Image" style="width: 100%; height: auto;">
+        </div>
+    </div>
+</div>
+
+<div class="container contact-info text-center" id="contact" style="margin-top: 10px;">
+    <h2>Contact Information</h2>
+    <p>Name: BHMS Hospital</p>
+    <p>Email: info@bhmshospital.com</p>
+    <p>Mobile Number: +1234567890</p>
+    <p>Address: Banshedra, Kannad, Aurangabad, Maharashtra, India</p>
+</div>
+
+
+<div class="container map-location text-center" id="location">
+    <h2>Location</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.5634925115795!2d75.19500877556596!3d19.738978982222842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdba4dbeccccacf%3A0x8d569c9089a1c45b!2sKannad%2C%20Aurangabad%2C%20Maharashtra%20431206%2C%20India!5e0!3m2!1sen!2sus!4v1625482134978!5m2!1sen!2sus" allowfullscreen="" loading="lazy" style="width: 100%; height: 300px;"></iframe>
+</div>
+
+<div class="fixed-bottom-buttons">
+    <a href="#booking-form" class="btn btn-primary" style="width: 50%;">Book Now</a>
+    <a href="tel:+1234567890" class="btn btn-secondary" style="width: 50%; background-color: green;">Call</a>
+
+</div>
+
+<footer class="footer">
+    <div class="social-icons">
+        <a href="#"><img src="i.jpg" alt="Instagram"></a>
+        <a href="#"><img src="w.jpg" alt="WhatsApp"></a>
+        <a href="#"><img src="t.png" alt="Twitter"></a>
+        <a href="#"><img src="f.jpg" alt="Facebook"></a>
+        <a href="#"><img src="e.jpg" alt="Email"></a>
+    </div>
+    <p>&copy; 2024 BHMS Hospital. All rights reserved.</p>
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+

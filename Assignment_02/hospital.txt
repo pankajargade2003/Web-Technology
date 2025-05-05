@@ -1,0 +1,55 @@
+🏥 Hospital Management System (HMS) - Single Doctor Setup with Marketing Features
+🏗 Tech Stack:
+✅ Frontend: React.js (Tailwind CSS for styling)
+✅ Backend: Node.js + Express.js
+✅ Database: MySQL
+✅ Security: JWT Authentication, bcrypt password hashing
+
+⚡ Core Features of Hospital Management System
+1️⃣ Authentication & Authorization
+Secure login/signup system for Admin & Receptionist.
+Role-based access control (Admin: Full access, Receptionist: Limited access).
+2️⃣ Patient Management
+Add / View / Edit / Delete patients.
+Store patient medical history & previous prescriptions.
+3️⃣ Appointment Scheduling
+Book appointments for the single doctor.
+View scheduled appointments in a calendar-style dashboard.
+4️⃣ Tablet Prescription & Billing
+Manage Medicines: Add/View/Edit/Delete tablets & medicines.
+Prescribe Medicines: Assign medicines during patient visits.
+Printable Prescription & Bill: Generate a prescription-style printable bill with tablets & dosage.
+5️⃣ Reports & Doctor’s Dashboard
+Dashboard with statistics: Show total patients, upcoming appointments, earnings summary.
+Appointment Summary for the doctor with patient visit history.
+🎯 Marketing Features for User Engagement
+🏥 Hospital Showcase & Specialization
+Sidebar for hospital marketing: Display hospital images, services & location details.
+Doctor Profile Section: Show doctor’s specialization, expertise & experience.
+⭐ Patient Reviews & Testimonials
+Patients can submit reviews & feedback after consultations.
+Star ratings & testimonials displayed on the homepage.
+📍 Location & Contact Information
+Integrated Google Maps for hospital location.
+Contact Form for inquiries & appointment booking.
+📸 Image Gallery & Facilities
+Slideshow showcasing hospital infrastructure & facilities.
+Highlight wards, ICU, lab, and medical services.
+🖥️ Admin Panel (Doctor’s Panel) - Navbar & Sidebar Concept
+🔹 Navbar (Top Navigation)
+Hospital Logo + Name
+Doctor’s Name & Profile Picture
+Logout Button
+🔹 Sidebar (Doctor Panel Navigation)
+1️⃣ Dashboard (Statistics, Today’s Appointments)
+2️⃣ Patients (Add/View/Edit/Delete Patients)
+3️⃣ Appointments (View Scheduled Appointments)
+4️⃣ Prescriptions & Billing (Assign Medicines, Generate Bills)
+5️⃣ Medicines Management (Add/View/Edit/Delete Tablets)
+6️⃣ Reviews & Feedback (View & Manage Patient Testimonials)
+7️⃣ Hospital Marketing (Public View)
+
+Doctor’s Specialization
+Image Gallery
+Facilities Showcase
+8️⃣ Settings (Profile, Password Change)

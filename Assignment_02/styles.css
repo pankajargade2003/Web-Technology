@@ -1,0 +1,62 @@
+body {
+    scroll-behavior: smooth;
+    background-color: #f8f9fa;
+}
+
+/* Hero Section */
+
+
+/* Section Styling */
+section {
+    padding: 60px 0;
+}
+
+/* Navbar */
+/* Reduce Navbar Height */
+.small-navbar {
+    padding: 5px 10px;
+    font-size: 20px;
+    
+}
+
+.navbar-brand img {
+    height: 40px;
+    width: 40px;
+}
+
+.navbar-nav .nav-link {
+    padding: 5px 10px;
+    color: black;
+}
+
+/* Hero Section */
+.hero {
+   
+    color: rgb(32, 6, 140);
+    padding: 80px;
+    text-align: center;
+}
+
+/* Image Slider */
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Contact Section */
+#contact .row {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+.btn-primary {
+    background: #ff0000;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: #d40000;
+}
